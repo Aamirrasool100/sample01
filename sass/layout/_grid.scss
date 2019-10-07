@@ -1,0 +1,25 @@
+.row{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+     &-second{
+                display:flex;
+                 justify-content:space-around;
+                 flex-flow:row wrap;
+                 background-image:linear-gradient(to left bottom,rgba($color-primary-light,0.8),
+                rgba($color-primary-dark,0.7)),url(../images/design.png);
+                 background-size:cover;
+                  background-repeat: no-repeat;
+                  align-items: center;
+    }    
+ &-third{
+     display:flex;
+     justify-content: space-evenly;
+    align-items: center;
+    padding-top:10rem;
+    }
+    &-footer{
+        display:flex;
+        justify-content: space-around;
+
+    }
+}

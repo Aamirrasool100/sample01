@@ -1,0 +1,145 @@
+.row-third-cards{
+    height:33rem;
+    width:18rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    &:hover .cards{
+        transform:rotateY(180deg);
+    }
+    
+}
+.cards{
+    width:100%;
+    height:100%;
+    transition:all 1s ease-out;
+    position:relative;
+    border-radius:0.3rem;
+    box-shadow:0 1.5rem 5rem rgba($color-black,0.3);
+    transform-style: preserve-3d;
+    &__side{
+        width:100%;
+    height:100%;
+    position:absolute;
+         &--front{
+             background-color:$color-white;
+         } 
+         &--back-1{
+             transform:rotateY(180deg);
+             background-image: linear-gradient(to right bottom,
+             $color-secondary-light,
+             $color-secondary-dark);
+         }
+         &--back-2{
+            transform:rotateY(180deg);
+            background-image: linear-gradient(to right bottom,
+            $color-primary-light,
+            $color-primary-dark);
+        }
+        &--back-3{
+            transform:rotateY(180deg);
+            background-image: linear-gradient(to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark);
+        }
+   
+        }
+        &__picture{
+            background-size:cover;
+            background-position:center;
+            height:24vh;
+            -webkit-clip-path:polygon(0 0, 100% 0, 100% 80%,0 100%);
+            clip-path:polygon(0 0, 100% 0, 100% 80%,0 100%);
+            position:relative;
+            &--1{
+                background-image: linear-gradient(to right bottom,
+                rgba($color-secondary-light,0.4),
+                rgba($color-secondary-dark,0.3)),
+                url(../images/lap1.jpg);
+    
+            }
+            &--2{
+                background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light,0.4),
+                rgba($color-primary-dark,0.3)),
+                url(../images/lap2.jpg);
+            }
+            &--3{
+                background-image: linear-gradient(to right bottom,
+                rgba($color-tertiary-light,0.4),
+                rgba($color-tertiary-dark,0.3)),
+                url(../images/lap3.jpg);
+            }
+        }
+     &__heading{
+          font-size:1.5rem;
+          font-weight:200;
+          text-transform:uppercase;
+          color:$color-white;
+          position:absolute;
+          top:4rem;
+          left:2rem;
+          text-align:right;
+          display:inline-block;
+          
+     }
+     &__heading--span{
+              padding:0.2rem 1.4rem;
+              box-decoration-break: clone;
+        &-1{
+            background-image: linear-gradient(to right bottom,
+            $color-secondary-light,$color-secondary-dark);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom,
+            $color-primary-light,$color-primary-dark);
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom,
+            $color-tertiary-light,$color-tertiary-dark);
+        }
+     }
+
+     &__details{
+         ul{
+             list-style:none;
+             width:80%;
+             margin:0 auto;
+             li{
+                 text-align:center;
+                 font-size:1.2rem;
+                 padding:0.7rem;
+
+                 &:not(:last-child){
+                     border-bottom:1px solid $color-grey-light-2;
+                 }
+             }
+         }
+     }
+    //  back side stylling
+     &__cta{
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%,-50%);
+         width:90%;
+     }
+     &__price-box{
+       text-align:center;
+       margin-bottom:6rem;
+       color:$color-white;
+     }
+     &__price-only{
+      font-size:1.2rem;
+      text-transform: uppercase;
+     }
+     &__price-value{
+         font-size:2rem;
+         padding:2rem;
+         font-weight:normal;
+     }
+    }
+.btn-price{
+    position:absolute;
+    right:15%;
+    padding:.5rem 1rem;
+}

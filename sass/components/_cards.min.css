@@ -1,0 +1,1 @@
+.row-third-cards{height:20rem;width:15rem}.row-third-cards:hover .cards{transform:rotateY(180deg)}.cards{width:100%;height:100%;transition:all 1s ease-out;background-color:grey;border-radius:0.3rem}
